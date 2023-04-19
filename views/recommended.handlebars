@@ -1,0 +1,20 @@
+<h1>{{pagetitle}}</h1>
+
+{{#if desc}}
+    <p class="descript">{{desc}}</p>
+{{else}}
+    <p>No content</p>
+{{/if}}
+
+
+<div class="cards">
+    {{#each games}}
+        <div class="card">
+            <h3>{{this.title}}</h3>
+            <p class="gameinfo">Genre : {{this.genre}}</p>
+            <p class="gameinfo">Artstyle : {{this.artstyle}}</p>
+            <h4>Price {{this.priceEuro}} €</h4>
+            <h5>On discount : {{this.onDiscount}}</h5>
+        </div>
+    {{/each}}
+</div>
